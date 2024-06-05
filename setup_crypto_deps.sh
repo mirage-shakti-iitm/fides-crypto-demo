@@ -267,6 +267,9 @@ git clone https://github.com/mirage-shakti-iitm/mirage-riscv.git
 cd mirage-riscv
 git checkout fides-crypto-demo
 eval $(opam env)
+opam install mirage-runtime bheap lwt cstruct metrics duration -y
+opam pin mirage-riscv . -y
+eval $(opam env)
 opam pin mirage-riscv-riscv . -y
 cd ../
 
