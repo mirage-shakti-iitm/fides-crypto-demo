@@ -365,6 +365,6 @@ opam install mirage-logs-riscv mirage-riscv-riscv mirage-runtime-riscv mirage-ti
 
 # Copying ppx libraries
 eval $(opam env)
-opam install ppx_cstruct ppx_derivers ppx_deriving ppxlib ppx_sexp_conv
+opam install ppx_cstruct ppx_derivers ppx_deriving ppxlib ppx_sexp_conv -y
 cp ${OPAM_SWITCH_PREFIX}/lib/ppx* ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib/ -r
 
