@@ -8,7 +8,6 @@ opam pin mirage . -y
 cd ../
 
 # Installing Fides-OCaml cross compiler
-cd fides-crypto-demo
 git clone https://github.com/mirage-shakti-iitm/ocaml.git
 cd ocaml
 git pull
