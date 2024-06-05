@@ -24,7 +24,7 @@ opam reinstall ocaml-riscv -y
 
 # Installing seq
 eval $(opam env)
-cp ${OPAM_SWITCH_PREFIX}/lib/seq ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib -r
+# cp ${OPAM_SWITCH_PREFIX}/lib/seq ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib -r
 
 # Installing fides-utilities
 # cd ../
