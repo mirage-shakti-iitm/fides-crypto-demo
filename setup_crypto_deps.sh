@@ -22,6 +22,10 @@ eval $(opam env)
 opam pin ocaml-riscv . -y
 opam reinstall ocaml-riscv -y
 
+# Installing seq
+eval $(opam env)
+cp ${OPAM_SWITCH_PREFIX}/lib/seq ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib -r
+
 # Installing fides-utilities
 cd ../
 git clone https://github.com/mirage-shakti-iitm/fides-utilities.git
@@ -351,5 +355,5 @@ cd ../
 
 # Copying ppx libraries
 eval $(opam env)
-cp $OPAM_SWITCH_PREFIX/lib/ppx* $OPAM_SWITCH_PREFIX/riscv-sysroot/lib/ -r
+cp ${OPAM_SWITCH_PREFIX}/lib/ppx* ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib/ -r
 
