@@ -290,6 +290,10 @@ cd mirage
 git checkout fides-crypto-demo
 eval $(opam env)
 opam pin mirage-runtime-riscv . -y
+eval $(opam env)
+opam pin mirage-types-riscv . -y
+eval $(opam env)
+opam pin mirage-types-lwt-riscv . -y
 cd ../
 
 # Installing mirage-time
@@ -356,6 +360,13 @@ eval $(opam env)
 opam pin mirage-random-riscv . -y
 cd ../
 
+# Installing baremetal-linker-riscv
+git clone https://github.com/mirage-shakti-iitm/baremetal-linker-riscv.git
+cd baremetal-linker-riscv
+git checkout compartments
+eval $(opam env)
+opam pin . -y
+cd ../
 
 # Installing seq
 eval $(opam env)
@@ -369,6 +380,6 @@ opam install mirage-logs-riscv mirage-riscv-riscv mirage-runtime-riscv mirage-ti
 
 # Copying ppx libraries
 eval $(opam env)
-opam install ppx_cstruct ppx_derivers ppx_deriving ppxlib ppx_sexp_conv -y
+opam install ppx_cstruct ppx_derivers ppx_deriving ppxlib ppx_sexp_conv mirage-types-lwt -y
 cp ${OPAM_SWITCH_PREFIX}/lib/ppx* ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib/ -r
 
