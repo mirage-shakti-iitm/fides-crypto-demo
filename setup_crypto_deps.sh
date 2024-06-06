@@ -30,6 +30,10 @@ git pull
 cd cap_matrix_gen
 make install_cap_matrix_generator
 
+# Installing linker-scripts
+cd ../linker-scripts
+make install_linker_scripts
+
 # Install ocaml-boot-riscv
 cd ../../
 git clone https://github.com/mirage-shakti-iitm/ocaml-boot-riscv.git
