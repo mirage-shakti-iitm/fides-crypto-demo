@@ -391,4 +391,4 @@ opam reinstall domain-name-riscv functoria-runtime-riscv fmt-riscv ipaddr-riscv 
 eval $(opam env)
 opam reinstall mirage-logs-riscv mirage-riscv-riscv mirage-runtime-riscv mirage-time-riscv mirage-type-lwt-riscv -y
 eval $(opam env)
-opam reinstall mirage-clock-riscv mirage-clock-freestanding-riscv mirage-type-lwt-riscv
+opam reinstall mirage-clock-riscv mirage-clock-freestanding-riscv mirage-types-lwt-riscv
