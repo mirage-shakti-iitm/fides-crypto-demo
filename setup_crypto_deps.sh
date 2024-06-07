@@ -310,6 +310,8 @@ cd mirage-bootvar-riscv
 git checkout fides-crypto-demo
 eval $(opam env)
 opam pin mirage-bootvar-riscv . -y
+eval $(opam env)
+opam pin mirage-bootvar-riscv-riscv . -y
 cd ../
 
 # Installing mirage-clock
@@ -318,6 +320,8 @@ cd mirage-clock-riscv
 git checkout fides-crypto-demo
 eval $(opam env)
 opam pin mirage-clock-riscv . -y
+eval $(opam env)
+opam pin mirage-clock-freestanding-riscv . -y
 cd ../
 
 # Installing mirage-crypto
@@ -373,9 +377,9 @@ eval $(opam env)
 cp ${OPAM_SWITCH_PREFIX}/lib/seq ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib -r
 
 # Reinstalling packages
-opam install domain-name-riscv functoria-runtime-riscv fmt-riscv ipaddr-riscv lwt-dllist-riscv lwt-riscv metrics-riscv mirage-bootvar-riscv mirage-crypto-rng-mirage-riscv -y
+opam install domain-name-riscv functoria-runtime-riscv fmt-riscv ipaddr-riscv lwt-dllist-riscv lwt-riscv metrics-riscv mirage-bootvar-riscv mirage-bootvar-riscv-riscv mirage-crypto-rng-mirage-riscv -y
 eval $(opam env)
-opam install mirage-logs-riscv mirage-riscv-riscv mirage-runtime-riscv mirage-time-riscv -y
+opam install mirage-logs-riscv mirage-riscv-riscv mirage-runtime-riscv mirage-time-riscv mirage-type-lwt-riscv -y
 
 
 # Copying ppx libraries
