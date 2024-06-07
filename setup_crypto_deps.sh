@@ -387,3 +387,8 @@ eval $(opam env)
 opam install ppx_cstruct ppx_derivers ppx_deriving ppxlib ppx_sexp_conv mirage-types-lwt -y
 cp ${OPAM_SWITCH_PREFIX}/lib/ppx* ${OPAM_SWITCH_PREFIX}/riscv-sysroot/lib/ -r
 
+opam reinstall domain-name-riscv functoria-runtime-riscv fmt-riscv ipaddr-riscv lwt-dllist-riscv lwt-riscv metrics-riscv mirage-bootvar-riscv mirage-bootvar-riscv-riscv mirage-crypto-rng-mirage-riscv -y
+eval $(opam env)
+opam reinstall mirage-logs-riscv mirage-riscv-riscv mirage-runtime-riscv mirage-time-riscv mirage-type-lwt-riscv -y
+eval $(opam env)
+opam reinstall mirage-clock-riscv mirage-clock-freestanding-riscv mirage-type-lwt-riscv
